@@ -1,5 +1,6 @@
 .goods-category {
   display: flex;
+  flex-direction: column;
 }
 
 .custom-sidebar {
@@ -9,7 +10,7 @@
 .goods-category__right {
   height: 100%;
   flex: auto;
-  width: 0;
+  width: 100%;
   position: relative;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
@@ -32,7 +33,6 @@
 .goods-category-normal-item-container {
   background-color: #f8f5fa;
   border-radius: 8rpx;
-  padding-top: 28rpx;
   margin-top: -24rpx;
   margin-bottom: 30rpx;
   display: flex;
@@ -40,14 +40,29 @@
 }
 
 .goods-category-normal-item-container-item {
-  height: 220rpx;
   display: flex;
+  flex-direction: column;
   margin-top: 24rpx;
   width: 100%;
   padding: 10px;
-  align-items: center;
   background-color: #fff;
   position: relative;
+}
+
+.car-base-info-container {
+  display: flex;
+  align-items: center;
+  height: 160rpx;
+}
+
+.car-detail-container {
+  display: flex;
+  align-items: flex-end;
+  height: 80rpx;
+}
+
+.car-detail-btn {
+  color: #707070;
 }
 
 .car-info-container {
@@ -64,18 +79,18 @@
   color: #707070;
 }
 
-.car-info-container .price {
+.price {
   position: absolute;
-  right: 0;
-  bottom: 10px;
+  right: 20rpx;
+  bottom: 20rpx;
   display: flex;
   align-items: flex-end;
+  color: chocolate;
 }
 
 .car-info-container .price .num {
-  font-size: 40rpx;
+  font-size: 36rpx;
   font-weight: bold;
-  color: chocolate;
   margin-right: 10rpx;
 }
 

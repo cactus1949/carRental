@@ -1,12 +1,12 @@
-import { getCarList } from '../../../services/good/fetchCategoryList';
+// import { getCarList } from '../../../services/good/fetchCategoryList';
 Page({
   data: {
     list: [],
   },
   async init() {
     try {
-      const result = await getCarList();
-      console.log(result);
+      // const result = await getCarList();
+      // console.log(result);
       // this.setData({
       //   list: result,
       // });

@@ -1,0 +1,10 @@
+<t-dropdown-menu>
+  <t-dropdown-item options="{{sorter.options}}" default-value="{{sorter.value}}" />
+  <t-dropdown-item
+    label="筛选"
+    optionsColumns="2"
+    options="{{doubleColumnsOptions}}"
+    defaultValue="{{['option_1', 'option_2']}}"
+    multiple
+  />
+</t-dropdown-menu>

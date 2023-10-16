@@ -7,6 +7,7 @@
 		  disabled="{{ item.disabled }}"
 		/>
 	</c-sidebar> -->
+  <single />
   <view class="goods-category__right">
     <c-tabbar wx:if="{{isSlotRight}}" activeKey="{{subActiveKey}}" bindchange="onChildChange" showMore>
       <slot />
@@ -31,11 +32,18 @@
               bindtap="changCategory"
               data-item="{{subItem}}"
             >
-              <t-image src="{{subItem.thumbnail}}" t-class="image" />
-              <view class="car-info-container">
-                <view class="car-name">{{ subItem.name }}</view>
-                <view class="car-infos">{{ '1.6' }}{{ '自动' }} | {{ '三厢' }} {{ '五座' }}</view>
-                <view class="price flex"> <view class="num">￥{{ '100' }}</view>/日均 </view>
+              <view class="car-base-info-container flex">
+                <t-image src="{{subItem.thumbnail}}" t-class="image" />
+                <view class="car-info-container">
+                  <view class="car-name">{{ subItem.name }}</view>
+                  <view class="car-infos">{{ '1.6' }}{{ '自动' }} | {{ '三厢' }} {{ '五座' }}</view>
+                </view>
+              </view>
+              <view class="car-detail-container">
+                <view class="car-detail-btn flex"
+                  >车辆详情<t-icon name="chevron-right" size="48rpx" data-name="chevron-right"
+                /></view>
+                <view class="price flex">日均￥<view class="num">{{ '100' }}</view> </view>
               </view>
             </view>
           </view>
