@@ -13,7 +13,7 @@
   position: relative;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: white;
+  background-color: f8f5fa;
 }
 
 .flex {
@@ -30,7 +30,7 @@
 }
 
 .goods-category-normal-item-container {
-  background-color: #fff;
+  background-color: #f8f5fa;
   border-radius: 8rpx;
   padding-top: 28rpx;
   margin-top: -24rpx;
@@ -40,16 +40,47 @@
 }
 
 .goods-category-normal-item-container-item {
-  height: 196rpx;
+  height: 220rpx;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 24rpx;
-  width: 33.3%;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.car-info-container {
+  margin-left: 40rpx;
+}
+
+.car-info-container .car-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.car-info-container .car-infos {
+  color: #707070;
+}
+
+.car-info-container .price {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.car-info-container .price .num {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: chocolate;
+  margin-right: 10rpx;
 }
 
 .goods-category-normal-item-container-item .image {
-  width: 144rpx;
+  width: 200rpx;
   height: 144rpx;
 }
 

@@ -16,3 +16,20 @@ export function getCategoryList() {
     resolve('real api');
   });
 }
+
+/** 获取汽车列表 */
+function mockFetchCars() {
+  const { delay } = require('../_utils/delay');
+  const { getCarList } = require('../../model/car');
+  return delay().then(() => getCarList());
+}
+
+/** 获取汽车列表 */
+export function getCarList() {
+  if (config.useMock) {
+    return mockFetchCars();
+  }
+  return new Promise((resolve) => {
+    resolve('real api');
+  });
+}
